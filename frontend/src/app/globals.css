@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --nhs-blue: #005EB8;
+  --nhs-dark-blue: #003087;
+  --nhs-bright-blue: #0072CE;
+  --nhs-light-blue: #41B6E6;
+  --nhs-aqua: #00A9CE;
+  --nhs-black: #231F20;
+  --nhs-dark-grey: #425563;
+  --nhs-mid-grey: #768692;
+  --nhs-pale-grey: #E8EDEE;
+  --nhs-white: #FFFFFF;
+  --nhs-green: #007F3B;
+  --nhs-red: #DA291C;
+  --nhs-yellow: #FAE100;
+  --nhs-warm-yellow: #FFB81C;
+}
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+}
+
+@layer components {
+  .nhs-button {
+    @apply bg-[var(--nhs-blue)] text-white px-6 py-3 rounded-lg font-semibold 
+           hover:bg-[var(--nhs-dark-blue)] transition-colors shadow-md;
+  }
+  
+  .nhs-card {
+    @apply bg-white rounded-xl shadow-sm border border-slate-200 p-6;
+  }
+  
+  .metric-value {
+    @apply text-3xl font-bold text-[var(--nhs-blue)];
+  }
+}
